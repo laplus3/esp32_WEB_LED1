@@ -5,9 +5,6 @@
 <head>
   <title>LEDをブラウザから操作</title>
   <script>
-    function updateBrightness(value) {
-      document.getElementById("brightnessValue").textContent = value;
-    }
 
     function updateTime() {
       var now = new Date();
