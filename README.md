@@ -35,10 +35,11 @@ WebServer server(80);
 WebサーバーのHTTPに使用されるポート番号は80である。
 任意のポート番号を割り当てることができる。例えば、
 ポート番号を12とすると、「http://www.laplus.jp:12/」というように
-サーバ名の後ろにコロン（:）とポート番号を加えたURLを指定しなければならない。  
-(1)https://ascii.jp/elem/000/000/458/458706/
+サーバ名の後ろにコロン（:）とポート番号を加えたURLを指定しなければならない[1]。  
 
+```
 const int led = 12;
+```
 LEDを接続するピンを指定
 ## setup関数
 初期化処理を行う。シリアル通信の開始、LEDのピンモード設定、WiFi接続、Webサーバーの設定、SPIFFSの初期化などが含まれる。
@@ -46,7 +47,7 @@ LEDを接続するピンを指定
 Serial.begin(115200);
 ```
 Arduinoからコンピュータへのシリアル通信を開始する。
-シリアル通信とは、データを送受信するための伝送路を1本、または2本使用して、データを1ビットずつ連続的に送受信する通信方式である。  (2）https://www.contec.com/jp/support/basic-knowledge/daq-control/serial-communicatin/
+シリアル通信とは、データを送受信するための伝送路を1本、または2本使用して、データを1ビットずつ連続的に送受信する通信方式である[2]。  
 ```
 pinMode(led, OUTPUT);
 ```
@@ -127,3 +128,6 @@ if (tm_info->tm_hour == 13 && tm_info->tm_min == 27 && tm_info->tm_sec == 50) {
   digitalWrite(led, LOW);  // それ以外の場合、LEDを消灯
 }
 ```
+## 引用
+[1]https://ascii.jp/elem/000/000/458/458706/
+[2]https://www.contec.com/jp/support/basic-knowledge/daq-control/serial-communicatin/
