@@ -7,6 +7,14 @@ esp32を用いてWiFiネットワークを接続し、無線通信を行う。
 特定の時間帯にLEDを点灯する機能を試す。
 SPIFFSを使用してArduino内のファイルを扱い、それをWebページの提供に利用する。
 
+# 結果
+## Webブラウザ
+![image](https://github.com/laplus3/esp32_WEB_LED1/assets/157358254/9eaf60ae-3e2f-4c5f-a185-910ce343a627)
+LED オンをクリックするとLEDが点灯する。LED オフをクリックするとLEDが消灯する。　　
+## 回路
+![esp32led1 1](https://github.com/laplus3/esp32_WEB_LED1/assets/157358254/e660c003-1135-4956-a87e-441bdbeeeb5a)
+
+
 # プログラムの説明
 esp32_WEB_LED1.ino
 ```
@@ -119,9 +127,3 @@ if (tm_info->tm_hour == 13 && tm_info->tm_min == 27 && tm_info->tm_sec == 50) {
   digitalWrite(led, LOW);  // それ以外の場合、LEDを消灯
 }
 ```
-# 結果
-## Webブラウザ
-![image](https://github.com/laplus3/esp32_WEB_LED1/assets/157358254/9eaf60ae-3e2f-4c5f-a185-910ce343a627)
-LED ONをクリックするとLEDが点灯する。LED OFFをクリックするとLEDが消灯する。　　
-## 回路
-![esp32led1 1](https://github.com/laplus3/esp32_WEB_LED1/assets/157358254/e660c003-1135-4956-a87e-441bdbeeeb5a)
