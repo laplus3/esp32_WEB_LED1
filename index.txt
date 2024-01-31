@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>LEDをブラウザから操作</title>
+  <script>
+    function updateBrightness(value) {
+      document.getElementById("brightnessValue").textContent = value;
+    }
+
+    function updateTime() {
+      var now = new Date();
+      var hours = now.getHours().toString().padStart(2, '0');
+      var minutes = now.getMinutes().toString().padStart(2, '0');
+      var seconds = now.getSeconds().toString().padStart(2, '0');
+
+      var currentTime = hours + ":" + minutes + ":" + seconds;
+      document.getElementById("currentTime").textContent = currentTime;
+    }
+
+    setInterval(updateTime, 1000);  // 1秒ごとに時間を更新
+  </script>
+</head>
+<body>
+  <h1>LED操作</h1>
+
+  <form action="/" method="post">
+    <button type='submit' name='click' value='on'><big>LED オン<big></button>
+  </form>
+
+  <form action="/" method="post">
+    <button type='submit' name='click' value='off'><big>LED オフ<big></button>
+  </form>
+
+  <p>
+    <strong>現在の時間:</strong>
+    <span id="currentTime"></span>
+  </p>
+</body>
+</html>
