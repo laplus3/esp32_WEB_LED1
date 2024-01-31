@@ -32,7 +32,7 @@ WebサーバーのHTTPに使用されるポート番号は80である。
 
 const int led = 12;
 LEDを接続するピンを指定
-# setup関数
+## setup関数
 初期化処理を行う。シリアル通信の開始、LEDのピンモード設定、WiFi接続、Webサーバーの設定、SPIFFSの初期化などが含まれる。
 ```
 Serial.begin(115200);
@@ -74,7 +74,7 @@ server.begin();
 SPIFFS.begin();
 ```
 Webサーバーをポート80で開始し、SPIFFS(フラッシュメモリ内のファイルにアクセスするためのもの）を初期化する。これにより、後で、SPIFFSを使用してファイル（HTMLファイルなど）を読み込むことができる。
-# loop関数
+## loop関数
 ```
 void loop() {
   server.handleClient();
@@ -82,7 +82,7 @@ void loop() {
 }
 ```
 メインのループ処理を行う。Webサーバーのクライアント処理と、特定の時間にLEDを制御する処理が繰り返される。
-# handleLedOnOff関数
+## handleLedOnOff関数
 Webサーバーが"/"(ルート)に対するリクエストを受けたときに呼び出される処理を担当している。
 ```
 dataFile = SPIFFS.open("/index.txt", FILE_READ);
@@ -106,7 +106,7 @@ Webブラウザなどから送信されたフォームデータの中に "click"
 server.send(200, "text/html", html);
 ```
 読み込んだHTMLコンテンツをHTTPステータスコード200(成功)とともにクライアント(ブラウザ)に返す。
-# controlLedByTime関数
+## controlLedByTime関数
 ```
 // 現在の時刻を取得
 time_t now = time(nullptr);  // 現在の時間を取得し、それを time_t 型の変数 now に格納
@@ -119,3 +119,8 @@ if (tm_info->tm_hour == 13 && tm_info->tm_min == 27 && tm_info->tm_sec == 50) {
   digitalWrite(led, LOW);  // それ以外の場合、LEDを消灯
 }
 ```
+# 結果
+## Webブラウザ
+![image](https://github.com/laplus3/esp32_WEB_LED1/assets/157358254/9eaf60ae-3e2f-4c5f-a185-910ce343a627)
+## 回路
+![esp32led1 1](https://github.com/laplus3/esp32_WEB_LED1/assets/157358254/e660c003-1135-4956-a87e-441bdbeeeb5a)
