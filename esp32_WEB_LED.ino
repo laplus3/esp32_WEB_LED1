@@ -80,7 +80,5 @@ void controlLedByTime() {
   // 特定の時間帯になったらLEDを点灯
   if (tm_info->tm_hour == 13 && tm_info->tm_min == 27 && tm_info->tm_sec == 50) {
     digitalWrite(led, HIGH);  // LEDを点灯
-  } else {
-    digitalWrite(led, LOW);   // LEDを消灯
-  }
+  } 
 }
