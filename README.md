@@ -129,5 +129,7 @@ if (tm_info->tm_hour == 13 && tm_info->tm_min == 27 && tm_info->tm_sec == 50) {
 }
 ```
 ## 引用
-[1]https://ascii.jp/elem/000/000/458/458706/
+[1]https://ascii.jp/elem/000/000/458/458706/  
 [2]https://www.contec.com/jp/support/basic-knowledge/daq-control/serial-communicatin/
+## 参考リンク
+[1]https://omoroya.com/esp32-lesson07/  
