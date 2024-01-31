@@ -122,5 +122,6 @@ if (tm_info->tm_hour == 13 && tm_info->tm_min == 27 && tm_info->tm_sec == 50) {
 # 結果
 ## Webブラウザ
 ![image](https://github.com/laplus3/esp32_WEB_LED1/assets/157358254/9eaf60ae-3e2f-4c5f-a185-910ce343a627)
+LED ONをクリックするとLEDが点灯する。LED OFFをクリックするとLEDが消灯する。　　
 ## 回路
 ![esp32led1 1](https://github.com/laplus3/esp32_WEB_LED1/assets/157358254/e660c003-1135-4956-a87e-441bdbeeeb5a)
