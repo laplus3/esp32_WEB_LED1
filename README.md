@@ -11,6 +11,7 @@ SPIFFSを使用してArduino内のファイルを扱い、それをWebページ�
 ## Webブラウザ
 ![image](https://github.com/laplus3/esp32_WEB_LED1/assets/157358254/9eaf60ae-3e2f-4c5f-a185-910ce343a627)
 LED オンをクリックするとLEDが点灯する。LED オフをクリックするとLEDが消灯する。　　
+特定の時刻になったらLEDをONにする。ただし、このプログラムは正しい時刻を取得していない。
 ## 回路
 ![esp32led1 1](https://github.com/laplus3/esp32_WEB_LED1/assets/157358254/e660c003-1135-4956-a87e-441bdbeeeb5a)
 
